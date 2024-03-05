@@ -1,3 +1,4 @@
+
 name: Test, Build, and Deploy | Modul 01 - Lab2.2 Senior Project
 
 on:
@@ -41,14 +42,13 @@ jobs:
               eval "$(ssh-agent -s)"
               ssh-add ~/.ssh/vm_senpro_modul2_62
               echo "Cek folder project";
-              [ ! -d "${HOME}/senpro/478174/modul02/senpro-github-action/" ] &&
+              [ ! -d "${home}/senpro/478174/modul02/senpro-github-action/" ] &&
               {
                 echo "Repository belum di-clone. Cloning...";
                 mkdir -p ~/senpro/478174/modul02;
                 cd ~/senpro/478174/modul02;
                 git clone git@github.com:ValentinusRosari/senpro-github-action.git;
               } ||
-              {
               }
                 echo "Repository sudah ada. Building...";
                 cd ~/senpro/478174/modul02/senpro-github-action;
